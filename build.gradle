@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+plugins {
+    id 'scala'
+}
+
+group 'com.thrillpool'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+allprojects {
+    apply plugin: 'scala'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.14'
+    }
+}
+

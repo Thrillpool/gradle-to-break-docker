@@ -1,0 +1,11 @@
+dependencies {
+    implementation project(":app3")
+}
+
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.forkOptions.jvmArgs = [
+        "-Xms503m",
+        "-Xmx503m",
+        "-XX:+AlwaysPreTouch"
+    ]
+}

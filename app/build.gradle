@@ -1,0 +1,7 @@
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.forkOptions.jvmArgs = [
+        "-Xms500m",
+        "-Xmx500m",
+        "-XX:+AlwaysPreTouch"
+    ]
+}
